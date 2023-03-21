@@ -36,7 +36,9 @@ let swiper01 = new Swiper(".slide-banner", {
   loop: true,
   breakpoints:{
     1025: {
-      pagination: false,
+      pagination: {
+        el: ".slide-pagination",
+      },
     },
     320: {
       pagination: {
