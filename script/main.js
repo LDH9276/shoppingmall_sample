@@ -84,7 +84,6 @@ if(window.innerWidth < 728){
   slideNextBtn.setAttribute('src', 'img/btn-right.svg');
 } else {
   const searchIcon = document.querySelector('.search');
-  $('.f-menu ul').slideDown();
   searchIcon.setAttribute('src', 'img/search.svg');  
 }
 }

@@ -17,53 +17,6 @@
     text-align: center;
     background-color: #000;
 }
-
-@media (prefers-color-scheme: dark) {
-    header{
-    background-color: #333;
-    color: #fff;
-    }
-    .h-toggle__sub{
-        background-color: #444;
-    }
-    .h-lnb-my_bao{
-        border-top: 1px solid #777;
-        border-bottom: 1px solid #777;
-    }
-    .h-lnb-mybuy {
-        border-bottom: 1px solid #777;
-    }
-    .h-lnb-cartlist{
-        border-bottom: 1px solid #777;
-    }
-    .h-mobile-gnb ul{
-        border-top: 1px solid #777;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    header{
-    background-color: var(--m-color02);
-    color: var(--m-color01);
-    }
-    .h-toggle__sub{
-    background-color: var(--m-color02);
-    }
-    .h-lnb-my_bao{
-        border-top: 1px solid #d9d9d9;
-        border-bottom: 1px solid #d9d9d9;
-    }
-    .h-lnb-mybuy {
-        border-bottom: 1px solid #d9d9d9;
-    }
-    .h-lnb-cartlist{
-        border-bottom: 1px solid #d9d9d9;
-    }
-    .h-mobile-gnb ul{
-        border-top: 1px solid #d9d9d9;
-    }
-}
-
 /* header */
 @media screen and (min-width:1170px) {
     @media (min-width:1891px) {
@@ -79,6 +32,7 @@
             right: -990px;
             width: 1000px;
             height: 105vh;
+            background: var(--m-color02);
             z-index: 800;
         }
         .h-toggle__sub {
@@ -89,6 +43,7 @@
             width: 446px;
             height: 105vh;
             padding: 0 32px;
+            background-color: var(--m-color02);
             box-sizing: border-box;
             box-shadow: -5px 0 15px rgba(0,0,0,.1);
             transition: 0.3s;
@@ -115,6 +70,7 @@
             width: 446px;
             height: 105vh;
             padding: 0 32px;
+            background-color: var(--m-color02);
             box-sizing: border-box;
             box-shadow: -5px 0 15px rgba(0,0,0,.1);
             transition: 0.3s;
@@ -130,6 +86,7 @@
         width: 100%;
         height: 120px;
         margin: 0 auto;
+        background: var(--m-color02);
         z-index: 9988;
     }
     .h-wrap {
@@ -279,7 +236,8 @@
     .h-lnb-my_bao {
         width: 100%;
         margin: 20px auto 0;
-
+        border-top: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
     }
     .h-lnb-title {
         display: inline-block;
@@ -342,6 +300,7 @@
     }
     .h-lnb-mybuy {
         margin: 0 auto;
+        border-bottom: 1px solid #d9d9d9;
     }
     .h-mybuy-item {
         height: 60px;
@@ -369,6 +328,7 @@
     }
     .h-lnb-cartlist {
         margin: 0 auto;
+        border-bottom: 1px solid #d9d9d9;
     }
     .h-cartlist-item {
         height: 60px;
@@ -405,6 +365,7 @@
         width: 100%;
         height: 90px;
         margin: 0 auto;
+        background: var(--m-color02);
         z-index: 9988;
     }
     .h-wrap {
@@ -414,6 +375,7 @@
         height: 90px;
         padding: 0 24px;
         margin: 0 auto;
+        background: var(--m-color02);
         justify-content: space-between;
         z-index: 9999;
         box-sizing: border-box;
@@ -506,6 +468,7 @@
         padding: 20px 0;
         line-height: 50px;
         justify-content: space-between;
+        border-top: 1px solid #d9d9d9;
     }
     .h-mobile-gnb ul li {
         width: 100%;
@@ -524,6 +487,7 @@
         width: 90%;
         height: 105vh;
         padding: 0 32px;
+        background-color: var(--m-color02);
         box-sizing: border-box;
         box-shadow: -5px 0 15px rgba(0,0,0,.1);
         transition: 0.3s;
@@ -550,7 +514,7 @@
         display: flex;
         position: relative;
         width: 100%;
-        margin: 30px auto 20px;
+        margin: 0 auto 40px;
     }
     .h-lnb-user_profile {
         width: 150px;
@@ -558,22 +522,17 @@
         object-fit: cover;
     }
     .h-lnb-name-wrap {
-        width: 100%;
-        position: relative;
-        margin-left: 25px;
+        position: absolute;
+        bottom: 0;
+        left: 210px;
     }
     .h-lnb-user_class {
         display: block;
         font-weight: 200;
         font-size: var(--f-size02);
         line-height: var(--f-size03);
-        position: absolute;
-        bottom: 36px;
     }
     .h-lnb-user_name {
-        width: 100%;
-        position: absolute;
-        bottom:0px;
         display: block;
         font-weight: 600;
         font-size: var(--f-size04);
@@ -582,6 +541,8 @@
     .h-lnb-my_bao {
         width: 100%;
         margin: 0 auto;
+        border-top: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
     }
     .h-lnb-title {
         display: inline-block;
@@ -645,6 +606,7 @@
     }
     .h-lnb-mybuy {
         margin: 0 auto;
+        border-bottom: 1px solid #d9d9d9;
     }
     .h-mybuy-item {
         height: 60px;
@@ -683,6 +645,7 @@
     }
     .h-lnb-cartlist {
         margin: 0 auto;
+        border-bottom: 1px solid #d9d9d9;
     }
     .h-cartlist-item {
         height: 60px;
@@ -719,6 +682,7 @@
         width: 100%;
         height: 60px;
         margin: 0 auto;
+        background: var(--m-color02);
         z-index: 9988;
     }
     .h-wrap {
@@ -728,6 +692,7 @@
         height: 60px;
         padding: 0 16px;
         margin: 0 auto;
+        background: var(--m-color02);
         justify-content: space-between;
         z-index: 9999;
         box-sizing: border-box;
@@ -817,6 +782,7 @@
         padding: 15px 0;
         line-height: 40px;
         grid-template-columns: repeat(3,1fr);
+        border-top: 1px solid #d9d9d9;
     }
     .h-mobile-gnb ul li {
         width: 100%;
@@ -835,6 +801,7 @@
         width: 100%;
         height: 105vh;
         padding: 0 16px;
+        background-color: var(--m-color02);
         box-sizing: border-box;
         box-shadow: -5px 0 15px rgba(0,0,0,.1);
         transition: 0.3s;
@@ -863,24 +830,17 @@
     .h-lnb-user-wrap {
         display: flex;
         position: relative;
-        width: 108%;
-        height: 150px;
-        padding: 20px;
-        background: #000;
-        transform: translateX(-16px);
+        width: 100%;
     }
     .h-lnb-user_profile {
         width: 100px;
         height: 100px;
         object-fit: cover;
-        position: absolute;
-        left: 50%; transform: translateX(-100%);
     }
     .h-lnb-name-wrap {
         position: absolute;
-        bottom:30px;
-        right: 50%; transform: translateX(120%);
-        color: var(--m-color02);
+        bottom: 0;
+        left: 115px;
     }
     .h-lnb-user_class {
         display: block;
@@ -896,6 +856,8 @@
     }
     .h-lnb-my_bao {
         width: 100%;
+        border-top: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
     }
     .h-lnb-title {
         display: inline-block;
@@ -921,8 +883,7 @@
     }
     .h-my_bao-list {
         display: grid;
-        max-width: 450px;
-        margin: 0 auto;
+        width: 100%;
         grid-template-columns: repeat(3,1fr);
         grid-gap: 16px;
         overflow: hidden;
@@ -952,6 +913,7 @@
     }
     .h-lnb-mybuy {
         margin: 0 auto;
+        border-bottom: 1px solid #d9d9d9;
     }
     .h-mybuy-item {
         height: 40px;
@@ -990,6 +952,7 @@
     }
     .h-lnb-cartlist {
         margin: 0 auto;
+        border-bottom: 1px solid #d9d9d9;
     }
     .h-cartlist-item a {
         display: flex;
@@ -1158,12 +1121,6 @@ footer a, footer p{
   .f-top{
     width: 100%;
     grid-column: 2/7;
-  }
-  .f-menu{
-    display: none;
-  }
-  .f-menu.act{
-    display: block;
   }
   .f-top ul{
     margin: 15px 0px;

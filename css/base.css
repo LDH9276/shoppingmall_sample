@@ -4,8 +4,43 @@
 html, body{
   font-family: 'Pretendard', sans-serif;
   font-size: 16px;
-  color: var(--m-color01);
 }
+
+/* 다크모드 */
+@media (prefers-color-scheme: dark) {
+  html, body{
+    background-color: #000;
+    color: #fff;
+  }
+  a {
+    color: #fff;
+  }
+  :root {
+    --m-color01 : #272727;
+    --m-color02 : #fff;
+    --m-color03 : #777;
+    --f-size01 : 14px;
+    --f-size02 : 16px;
+    --f-size03 : 18px;
+    --f-size04 : 32px;
+  }
+  
+}
+/* 라이트모드 */
+@media (prefers-color-scheme: light) {
+  :root {
+    --m-color01 : #272727;
+    --m-color02 : #fff;
+    --m-color03 : #f4f4f4;
+    --f-size01 : 14px;
+    --f-size02 : 16px;
+    --f-size03 : 18px;
+    --f-size04 : 32px;
+  }
+  
+}
+
+
 a{
   text-decoration: none;
   color: inherit;}
@@ -13,15 +48,6 @@ ol, ul, li{
   list-style: none;
 }
 
-:root {
-  --m-color01 : #272727;
-  --m-color02 : #fff;
-  --m-color03 : #f4f4f4;
-  --f-size01 : 14px;
-  --f-size02 : 16px;
-  --f-size03 : 18px;
-  --f-size04 : 32px;
-}
 
 select, input{
   /*ios대응*/
@@ -30,3 +56,5 @@ select, input{
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   }
+
+/* Path: 02SQL-DBproject/css/header.css */
