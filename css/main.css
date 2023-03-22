@@ -37,6 +37,10 @@
     .swiper-slide:hover .lineup-list-bar {
         background: var(--m-color01);
     }
+    #product-category {
+        border: 1px solid var(--m-color01);
+        color: var(--m-color01);
+    }
 }
 @media (prefers-color-scheme: dark) {
     .shop_info-item {
@@ -68,6 +72,10 @@
     }
     .lineup-pagination .swiper-pagination-bullet {
         background: var(--m-color02);
+    }
+    #product-category {
+        border: 1px solid var(--m-color02);
+        color: var(--m-color02);
     }
 }
 
@@ -206,7 +214,8 @@
         width: 100%;
         height: 320px;
         background: var(--m-color01);
-        z-index: -99;
+        z-index: 0;
+        color: var(--m-color01);
     }
     .slide-btn-wrap {
         position: absolute;
@@ -869,7 +878,6 @@
         width: 200px; 
         margin: 0 auto;
         height: 30px;
-        border: 1px solid var(--m-color01);
         border-radius: 0;
     }
     #product-category > option {

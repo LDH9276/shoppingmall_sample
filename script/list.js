@@ -72,7 +72,6 @@ function handleColorSchemeChange(e) {
     prevBtn.forEach(arr => {
       arr.src = 'img/btn-left.svg';
     });
-
   }
 }
 

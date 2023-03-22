@@ -90,7 +90,10 @@ if(window.innerWidth < 728){
 
 
 //다크모드
+const dropdown = document.querySelector('.category-drop');
 const arrow01 = document.querySelectorAll('.right-btns');
+const leftBtn = document.querySelector('.line_up-banner-prev');
+const rightBtn = document.querySelector('.line_up-banner-next');
 const darkModeQuery01 = window.matchMedia('(prefers-color-scheme: dark)');
 
 
@@ -99,11 +102,17 @@ function handleColorSchemeChange(e) {
     arrow01.forEach(arrow => {
       arrow.src = 'img/wt-right-btn.svg';
     });
+    leftBtn.src = 'img/wt-btn-left.svg';
+    rightBtn.src = 'img/wt-btn-right.svg';
+    dropdown.src = 'img/wt-down-btn.svg';
   } 
   else {
     arrow01.forEach(arrow => {
       arrow.src = 'img/right-btn.svg';
     });
+    leftBtn.src = 'img/btn-left.svg';
+    rightBtn.src = 'img/btn-right.svg';
+    dropdown.src = 'img/down_btn.svg';
   }
 }
 

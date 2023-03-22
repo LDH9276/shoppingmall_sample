@@ -55,7 +55,7 @@
   <?php
 
   #---- 데이터베이스 연결 ----#
-  include "dbconn.php";
+  include "lib.php";
 
   #---- 검색조건에 따른 질의를 선택합니다 ----#
   if((trim($search_item) == '') || (trim($search_text) == ''))
