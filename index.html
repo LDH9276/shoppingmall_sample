@@ -29,7 +29,7 @@
 </head>
 <body>
   <!-- 헤더 영역 -->
-  <header>
+  <header class="header">
     <div class="h-wrap">
       <h1>
         <a href="index.html">
@@ -49,7 +49,7 @@
           <nav class="h-lnb">
             <ul>
               <li><a href="#none"><img src="./img/cart.svg" alt="장바구니" id="logo02"></a></li>
-              <li><img src="./img/search.svg" alt="검색" class="search"></li>
+              <li class="search-btn"><img src="./img/search.svg" alt="검색" class="search"></li>
               <li class="h-toggle__menu">
                 <span>&nbsp;</span>
                 <span>&nbsp;</span>
@@ -179,13 +179,28 @@
       </div>
       <div class="h-sub-bg">&nbsp;</div>
     </div>
+    <div class="h-search-box">
+      <div class="h-search-wrap">
+        <div class="h-search">
+          <form action="#" method="get">
+            <fieldset>
+              <legend>검색</legend>
+              <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요">
+              <button type="submit" class="h-search-btn"><img src="./img/wt-search.svg" alt="검색"></button>
+              <button type="submit" class="h-search-close"><img src="./img/close.svg" alt="검색" class="close-icon"></button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>  
   </header>
+
 
   <main>
     <section id="banner">
       <div class="banner-bg"><h2>뱅앤울룹슨 메인페이지</h2></div>
       <article id="banner-wrap">
-        <h3 style="color:var(--m-color01);">뱅앤울룹슨 메인제품</h3>
+        <h3 style="opacity: 0;">뱅앤울룹슨 메인제품</h3>
         <div class="banner-list">
             <figure>
               <a href="#none" title="item1">

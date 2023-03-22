@@ -89,6 +89,9 @@
         background: var(--m-color02);
         z-index: 9988;
     }
+    .header.act{
+        height:60px;
+    }
     .h-wrap {
         display: flex;
         width: 1170px;

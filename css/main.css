@@ -83,14 +83,14 @@
 @media screen and (min-width:1025px) {
     #banner {
         position: relative;
-        padding-top: 120px;
+        padding-top: 80px;
     }
     #banner h2 {
         display: none;
     }
     .banner-bg {
         position: absolute;
-        top: 120px;
+        top: 80px;
         width: 100%;
         height: 470px;
         background: var(--m-color01);

@@ -58,12 +58,29 @@ $(document).ready(function(){
     $('.h-lnb-cartlist .h-lnb-title').toggleClass('act').parentsUntil('.h-sub-menu-wrap').siblings().find('.h-lnb-title').removeClass('act');
     $('.h-cartlist-list').stop().slideToggle().parentsUntil('.h-sub-menu-wrap').siblings().find('ul').slideUp();
   });
+
+  // 검색창 누르면 나옴
+  $('.search-btn').click(()=>{
+    $(this).find('img').addClass('act');
+    $('.h-search-box').addClass('act');
+  });
+  $('.h-search-close').click(()=>{
+    $('.search-btn img').removeClass('act');
+    $('.h-search-box').removeClass('act');
+  });
+  $('.search-btn img').click(function(event) {
+    if ($(event.target).hasClass('act')) {
+      alert('검색창은 추후 오픈예정.');
+      // $('form[name="search"]').submit(); 
+    }
+  });
 });
 
 // 다크모드 / 라이트모드
 const logo = document.querySelector('#logo');
 const logo02 = document.querySelector('#logo02');
 const logo03 = document.querySelector('.search');
+const closeBtn = document.querySelector('.close-icon');
 const menuArr01 = document.querySelectorAll('.h-lnb-title-arrow');
 const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -71,6 +88,7 @@ function handleColorSchemeChange(e) {
   if (darkModeQuery.matches) {
     logo.src = './img/wt-logo.svg';
     logo02.src = './img/wt-cart.svg';
+    closeBtn.src = './img/wt-close.svg';
     if (logo03.src = './img/user.svg' == true) {
       logo03.src = './img/wt-user.svg';
     } else {
@@ -83,6 +101,7 @@ function handleColorSchemeChange(e) {
   else {
     logo.src = './img/logo.svg';
     logo02.src = './img/cart.svg';
+    closeBtn.src = './img/close.svg';
     if (logo03.src = './img/user.svg' == true) {
       logo03.src = './img/user.svg';
     } else {
@@ -99,3 +118,7 @@ handleColorSchemeChange(darkModeQuery);
 
 // listen for changes in the color scheme preference and handle them in real time
 darkModeQuery.addListener(handleColorSchemeChange);
+
+// 스크롤 이벤트시 헤더 변경
+const header = document.querySelector('header');
+
