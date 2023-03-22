@@ -91,11 +91,11 @@ if(window.innerWidth < 728){
 
 //다크모드
 const arrow01 = document.querySelectorAll('.right-btns');
-const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const darkModeQuery01 = window.matchMedia('(prefers-color-scheme: dark)');
 
 
 function handleColorSchemeChange(e) {
-  if (darkModeQuery.matches) {
+  if (darkModeQuery01.matches) {
     arrow01.forEach(arrow => {
       arrow.src = 'img/wt-right-btn.svg';
     });
@@ -108,8 +108,8 @@ function handleColorSchemeChange(e) {
 }
 
 //다크모드인지 여부확인
-handleColorSchemeChange(darkModeQuery);
+handleColorSchemeChange(darkModeQuery01);
 
 //다크모드 감지
-darkModeQuery.addListener(handleColorSchemeChange);
+darkModeQuery01.addListener(handleColorSchemeChange);
 

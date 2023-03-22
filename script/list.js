@@ -16,21 +16,29 @@ const swiper01 = new Swiper(".slide-banner", {
   on: {
     slideChange: function () {
       if(swiper01.isBeginning) {
-        prevBtn.classList.add('disabled');
+        prevBtn.forEach(arr => {
+          arr.classList.add('disabled');
+        });
       } else {
-        prevBtn.classList.remove('disabled');
+        prevBtn.forEach(arr => {
+          arr.classList.remove('disabled');
+        });
       }
       if(swiper01.isEnd) {
-        nextBtn.classList.add('disabled');
+        nextBtn.forEach(arr => {
+          arr.classList.add('disabled');
+        });
       } else {
-        nextBtn.classList.remove('disabled');
+        nextBtn.forEach(arr => {
+          arr.classList.remove('disabled');
+        });
       }
     }
   }
 });
 
-const nextBtn = document.querySelector('.list-slide-next');
-const prevBtn = document.querySelector('.list-slide-prev');
+const nextBtn = document.querySelectorAll('.list-slide-next');
+const prevBtn = document.querySelectorAll('.list-slide-prev');
 
 
 $(document).ready(function(){
@@ -41,3 +49,36 @@ $(document).ready(function(){
     $('.item-about').attr('src', URL);
   });
 });
+
+
+
+//다크모드
+const darkModeQuery01 = window.matchMedia('(prefers-color-scheme: dark)');
+
+
+function handleColorSchemeChange(e) {
+  if (darkModeQuery01.matches) {
+    nextBtn.forEach(arr => {
+      arr.src = 'img/wt-btn-right.svg';
+    });
+    prevBtn.forEach(arr => {
+      arr.src = 'img/wt-btn-left.svg';
+    });
+  } 
+  else {
+    nextBtn.forEach(arr => {
+      arr.src = 'img/btn-right.svg';
+    });
+    prevBtn.forEach(arr => {
+      arr.src = 'img/btn-left.svg';
+    });
+
+  }
+}
+
+//다크모드인지 여부확인
+handleColorSchemeChange(darkModeQuery01);
+
+//다크모드 감지
+darkModeQuery01.addListener(handleColorSchemeChange);
+
