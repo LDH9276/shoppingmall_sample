@@ -1153,5 +1153,6 @@ footer a, footer p{
     font-size: var(--f-size01);
     color: var(--m-color02);
     font-style: normal;
+    transform: rotate(45deg);
   }
 }

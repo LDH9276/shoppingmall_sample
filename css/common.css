@@ -184,7 +184,6 @@
         margin: 32px 0;
         background: var(--m-color01);
         text-align: center;
-        border-radius: 50%;
         z-index: 9999;
         cursor: pointer;
         transition: 0.4s;
@@ -197,7 +196,6 @@
         margin: 32px 0;
         background: var(--m-color01);
         text-align: center;
-        border-radius: 50%;
         z-index: 9990;
         cursor: pointer;
         transition: 0.4s;
@@ -453,7 +451,6 @@
         margin: 21px 0;
         background: var(--m-color01);
         text-align: center;
-        border-radius: 50%;
         z-index: 9999;
         cursor: pointer;
         transition: 0.4s;
@@ -466,7 +463,6 @@
         margin: 21px 0;
         background: var(--m-color01);
         text-align: center;
-        border-radius: 50%;
         z-index: 9990;
         cursor: pointer;
         transition: 0.4s;
@@ -773,7 +769,6 @@
         margin: 10px 0;
         background: var(--m-color01);
         text-align: center;
-        border-radius: 50%;
         z-index: 9999!important;
         cursor: pointer;
         transition: 0.4s;
@@ -1198,3 +1193,20 @@ footer a, footer p{
     font-style: normal;
   }
 }
+
+/* #toggle-theme-btn{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    color: var(--m-color02);
+    background-color: var(--m-color01);
+    right: 5%;
+    bottom: 5%;
+    border: none;
+    transform: rotate(45deg);
+}
+#toggle-theme-btn > span{
+    display: block;
+    position: relative;
+    transform: rotate(-45deg);
+} */

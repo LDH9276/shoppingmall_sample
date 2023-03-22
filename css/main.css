@@ -18,6 +18,8 @@
     color: var(--m-color01);
 }
 
+
+
 @media (prefers-color-scheme: light) {
     .shop_info-item {
         background: #fff;
@@ -759,6 +761,7 @@
         left: -16px;
         width: 110%;
         height: 135px;
+        color : var(--m-color01);
         background-color: var(--m-color01);
     }
     .slide-title-wrap {

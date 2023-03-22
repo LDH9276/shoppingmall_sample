@@ -60,14 +60,42 @@ $(document).ready(function(){
   });
 });
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  // Apply dark mode styles
-  document.querySelectorAll('path').forEach(function(path) {
-    path.style.fill = 'white';
-  });
-} else {
-  // Apply light mode styles
-  document.querySelectorAll('path').forEach(function(path) {
-    path.style.fill = '#272727';
-  });
+// 다크모드 / 라이트모드
+const logo = document.querySelector('#logo');
+const logo02 = document.querySelector('#logo02');
+const logo03 = document.querySelector('.search');
+const menuArr01 = document.querySelectorAll('.h-lnb-title-arrow');
+const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+function handleColorSchemeChange(e) {
+  if (darkModeQuery.matches) {
+    logo.src = './img/wt-logo.svg';
+    logo02.src = './img/wt-cart.svg';
+    if (logo03.src = './img/user.svg' == true) {
+      logo03.src = './img/wt-user.svg';
+    } else {
+      logo03.src = './img/wt-search.svg';
+    }
+    menuArr01.forEach(arr => {
+      arr.src = './img/wt-down-btn.svg';
+    });
+  } 
+  else {
+    logo.src = './img/logo.svg';
+    logo02.src = './img/cart.svg';
+    if (logo03.src = './img/user.svg' == true) {
+      logo03.src = './img/user.svg';
+    } else {
+      logo03.src = './img/search.svg';
+    }
+    menuArr01.forEach(arr => {
+      arr.src = './img/down_btn.svg';
+    });
+  }
 }
+
+// call the function once to handle the initial color scheme
+handleColorSchemeChange(darkModeQuery);
+
+// listen for changes in the color scheme preference and handle them in real time
+darkModeQuery.addListener(handleColorSchemeChange);

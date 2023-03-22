@@ -89,3 +89,27 @@ if(window.innerWidth < 728){
 }
 
 
+//다크모드
+const arrow01 = document.querySelectorAll('.right-btns');
+const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+
+function handleColorSchemeChange(e) {
+  if (darkModeQuery.matches) {
+    arrow01.forEach(arrow => {
+      arrow.src = 'img/wt-right-btn.svg';
+    });
+  } 
+  else {
+    arrow01.forEach(arrow => {
+      arrow.src = 'img/right-btn.svg';
+    });
+  }
+}
+
+//다크모드인지 여부확인
+handleColorSchemeChange(darkModeQuery);
+
+//다크모드 감지
+darkModeQuery.addListener(handleColorSchemeChange);
+
